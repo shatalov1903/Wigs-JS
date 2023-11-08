@@ -1,0 +1,115 @@
+:root {
+  --ff-main: "Montserrat", sans-serif;
+}
+
+body {
+  font-family: var(--ff-main);
+}
+
+.wrapper {
+  max-width: 1440px;
+  padding: 55px;
+}
+
+/* header */
+.header {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 48px;
+}
+
+.header__container {
+  display: flex;
+  gap: 11px;
+}
+
+.header__ul {
+  display: flex;
+  align-items: center;
+  gap: 42px;
+}
+
+.header__a {
+  color: #000;
+  font-size: 17px;
+  font-weight: 500;
+}
+
+.header__icons {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+/* container (aside+main) */
+.container {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* aside */
+.aside__title {
+  color: #000;
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 54px;
+}
+
+.aside__ul {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.aside__a {
+  color: #000;
+  font-size: 15.71px;
+  font-weight: 500;
+}
+
+/* main */
+.main {
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  grid-template-rows: repeat(4, auto);
+  grid-template-areas:
+    "get get girl3 girl4"
+    "summer summer girl3 girl4"
+    "girl1 girl2 trending trending"
+    "girl1 girl2 buy buy";
+  gap: 10px;
+}
+
+.main__a_get {
+  grid-area: get;
+}
+
+.main__a_summer {
+  grid-area: summer;
+}
+
+.main__a_trending {
+  grid-area: trending;
+}
+
+.main__a_buy {
+  grid-area: buy;
+}
+
+.main__a_girl3 {
+  grid-area: girl3;
+}
+
+.main__a_girl4 {
+  grid-area: girl4;
+}
+
+.main__a_girl1 {
+  grid-area: girl1;
+}
+
+.main__a_girl2 {
+  grid-area: girl2;
+}
