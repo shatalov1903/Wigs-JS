@@ -9,6 +9,7 @@ body {
 .wrapper {
   max-width: 1440px;
   padding: 55px;
+  background: rgba(255, 255, 255, 0.8);
 }
 
 /* header */
@@ -35,6 +36,22 @@ body {
   color: #000;
   font-size: 17px;
   font-weight: 500;
+  position: relative;
+}
+
+.header__a::before {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  background: #000;
+  position: absolute;
+  bottom: -8px;
+  transition: 0.2s all ease-in-out;
+}
+
+.header__a:hover::before {
+  width: calc(100% - 5px);
 }
 
 .header__icons {
@@ -47,6 +64,7 @@ body {
 .container {
   display: flex;
   justify-content: space-between;
+  gap: 10px;
 }
 
 /* aside */
@@ -112,4 +130,45 @@ body {
 
 .main__a_girl2 {
   grid-area: girl2;
+}
+
+@media screen and (min-width: 992px) {
+  .aside__a {
+    position: relative;
+  }
+  .a__new::before {
+    content: url("img-icons/new.svg");
+    position: absolute;
+    right: 60px;
+  }
+  .a__clothing::before {
+    content: url("img-icons/clothing.svg");
+    position: absolute;
+    right: 75px;
+  }
+  .a__shoes::before {
+    content: url("img-icons/shoes.svg");
+    position: absolute;
+    right: 56px;
+  }
+  .a__accessories::before {
+    content: url("img-icons/accessories.svg");
+    position: absolute;
+    right: 102px;
+  }
+  .a__activewear::before {
+    content: url("img-icons/activewear.svg");
+    position: absolute;
+    right: 96px;
+  }
+  .a__gifts::before {
+    content: url("img-icons/gifts.svg");
+    position: absolute;
+    right: 112px;
+  }
+  .a__inspiration::before {
+    content: url("img-icons/inspiration.svg");
+    position: absolute;
+    right: 89px;
+  }
 }
