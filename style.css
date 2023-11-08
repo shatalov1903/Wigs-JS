@@ -1,5 +1,6 @@
 :root {
   --ff-main: "Montserrat", sans-serif;
+  --color-main: #000;
 }
 
 body {
@@ -10,6 +11,7 @@ body {
   max-width: 1440px;
   padding: 55px;
   background: rgba(255, 255, 255, 0.8);
+  margin-inline: auto;
 }
 
 /* header */
@@ -33,25 +35,9 @@ body {
 }
 
 .header__a {
-  color: #000;
+  color: var(--color-main);
   font-size: 17px;
   font-weight: 500;
-  position: relative;
-}
-
-.header__a::before {
-  content: "";
-  display: block;
-  width: 0;
-  height: 2px;
-  background: #000;
-  position: absolute;
-  bottom: -8px;
-  transition: 0.2s all ease-in-out;
-}
-
-.header__a:hover::before {
-  width: calc(100% - 5px);
 }
 
 .header__icons {
@@ -64,12 +50,16 @@ body {
 .container {
   display: flex;
   justify-content: space-between;
-  gap: 10px;
+  gap: 35px;
 }
 
 /* aside */
+.aside {
+  min-width: 140px;
+}
+
 .aside__title {
-  color: #000;
+  color: var(--color-main);
   font-size: 30px;
   font-weight: 700;
   margin-bottom: 54px;
@@ -81,8 +71,17 @@ body {
   gap: 30px;
 }
 
+.aside__li {
+  display: flex;
+  gap: 10px;
+}
+
+.aside__img {
+  max-width: 22px;
+}
+
 .aside__a {
-  color: #000;
+  color: var(--color-main);
   font-size: 15.71px;
   font-weight: 500;
 }
@@ -97,7 +96,7 @@ body {
     "summer summer girl3 girl4"
     "girl1 girl2 trending trending"
     "girl1 girl2 buy buy";
-  gap: 10px;
+  gap: 13px;
 }
 
 .main__a_get {
@@ -133,42 +132,20 @@ body {
 }
 
 @media screen and (min-width: 992px) {
-  .aside__a {
+  .header__a {
     position: relative;
   }
-  .a__new::before {
-    content: url("img-icons/new.svg");
+  .header__a::before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #000;
     position: absolute;
-    right: 60px;
+    bottom: -8px;
+    transition: 0.2s all ease-in-out;
   }
-  .a__clothing::before {
-    content: url("img-icons/clothing.svg");
-    position: absolute;
-    right: 75px;
-  }
-  .a__shoes::before {
-    content: url("img-icons/shoes.svg");
-    position: absolute;
-    right: 56px;
-  }
-  .a__accessories::before {
-    content: url("img-icons/accessories.svg");
-    position: absolute;
-    right: 102px;
-  }
-  .a__activewear::before {
-    content: url("img-icons/activewear.svg");
-    position: absolute;
-    right: 96px;
-  }
-  .a__gifts::before {
-    content: url("img-icons/gifts.svg");
-    position: absolute;
-    right: 112px;
-  }
-  .a__inspiration::before {
-    content: url("img-icons/inspiration.svg");
-    position: absolute;
-    right: 89px;
+  .header__a:hover::before {
+    width: calc(100% - 5px);
   }
 }
