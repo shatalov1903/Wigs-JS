@@ -170,11 +170,14 @@ body {
 }
 
 @media screen and (max-width: 992px) {
-  .aside {
-    min-width: 0;
+  .wrapper {
+    padding: 20px;
+  }
+  .header {
+    margin-bottom: 15px;
   }
   .header__ul,
-  .aside__ul {
+  .aside {
     position: fixed;
     height: 100%;
     display: flex;
@@ -188,12 +191,12 @@ body {
     right: 0;
     transform: translateX(120%);
   }
-  .aside__ul {
+  .aside {
     left: 0;
     transform: translateX(-120%);
   }
   .header__ul_active,
-  .aside__ul_active {
+  .aside_active {
     transform: translateX(0);
   }
   .list,
@@ -220,7 +223,7 @@ body {
   }
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 576px) {
   .main {
     grid-template-columns: repeat(2, auto);
     grid-template-areas:
@@ -232,12 +235,5 @@ body {
       "girl3 girl4"
       "trending trending"
       " buy buy";
-  }
-}
-
-@media screen and (max-width: 400px) {
-  .list,
-  .menu-burger {
-    font-size: 30px;
   }
 }
