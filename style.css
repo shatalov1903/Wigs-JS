@@ -25,7 +25,7 @@ body {
 
 .header__container {
   display: flex;
-  gap: 11px;
+  gap: 10px;
 }
 
 .header__ul {
@@ -131,6 +131,19 @@ body {
   grid-area: girl2;
 }
 
+/* icons */
+.list,
+.menu-burger {
+  display: none;
+  color: var(--color-main);
+  font-size: 40px;
+}
+
+.close {
+  display: none;
+  color: var(--color-main);
+}
+
 @media screen and (min-width: 992px) {
   .header__a {
     position: relative;
@@ -147,5 +160,84 @@ body {
   }
   .header__a:hover::before {
     width: calc(100% - 5px);
+  }
+  .aside__a {
+    transition: 0.2s all ease-in-out;
+  }
+  .aside__a:hover {
+    color: #ec7f0a;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .aside {
+    min-width: 0;
+  }
+  .header__ul,
+  .aside__ul {
+    position: fixed;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background: #ec7f0a;
+    top: 0;
+    padding: 20px 40px;
+    transition: 0.2s all ease-in-out;
+  }
+  .header__ul {
+    right: 0;
+    transform: translateX(120%);
+  }
+  .aside__ul {
+    left: 0;
+    transform: translateX(-120%);
+  }
+  .header__ul_active,
+  .aside__ul_active {
+    transform: translateX(0);
+  }
+  .list,
+  .menu-burger,
+  .close {
+    display: inline-block;
+  }
+  .header__ul,
+  .aside__ul {
+    align-items: normal;
+  }
+  .close {
+    text-align: right;
+  }
+  .header__icons {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+  }
+  .icons-menu {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .main {
+    grid-template-columns: repeat(2, auto);
+    grid-template-areas:
+      "get get"
+      "summer summer"
+      "girl1 girl2"
+      "girl1 girl2"
+      "girl3 girl4"
+      "girl3 girl4"
+      "trending trending"
+      " buy buy";
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .list,
+  .menu-burger {
+    font-size: 30px;
   }
 }

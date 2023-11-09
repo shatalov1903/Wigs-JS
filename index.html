@@ -3,6 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -16,12 +20,25 @@
   <body>
     <div class="wrapper">
       <header class="header">
-        <a href="/" class="header__logo">
-          <img src="img-icons/logo.svg" alt="Logo" />
-        </a>
+        <div class="logo__container">
+          <a href="/" class="header__logo">
+            <img src="img-icons/logo.svg" alt="Logo" />
+          </a>
+          <div class="icons-menu">
+            <span class="material-icons menu-burger" onclick="navToggle()">
+              menu
+            </span>
+            <span class="material-icons list" onclick="navToggle()">
+              list
+            </span>
+          </div>
+        </div>
         <div class="header__container">
           <nav class="header__nav">
-            <ul class="header__ul">
+            <ul class="header__ul" id="header-ul">
+              <span class="material-icons close" onclick="navToggle()">
+                close
+              </span>
               <li class="header__li">
                 <a href="/" class="header__a">products</a>
               </li>
@@ -47,10 +64,13 @@
         </div>
       </header>
       <div class="container">
-        <sidebar class="aside">
+        <aside class="aside">
           <nav class="aside__nav">
-            <h2 class="aside__title">Explore</h2>
-            <ul class="aside__ul">
+            <ul class="aside__ul" id="aside-ul">
+              <span class="material-icons close" onclick="navToggle()">
+                close
+              </span>
+              <h2 class="aside__title">Explore</h2>
               <li class="aside__li">
                 <img class="aside__img" src="img-icons/new.svg" alt="New" />
                 <a href="/" class="aside__a">New In</a>
@@ -97,7 +117,7 @@
               </li>
             </ul>
           </nav>
-        </sidebar>
+        </aside>
         <section class="main">
           <a href="/" class="main__a_get"
             ><img src="img/get.png" alt="Get"
@@ -126,5 +146,6 @@
         </section>
       </div>
     </div>
+    <script src="script.js"></script>
   </body>
 </html>
